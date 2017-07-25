@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+</head>
+<body>
+<h1>Canvas</h1>
+<canvas width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+<br>
+<hr>
+
+<h1>Canvas With Line</h1>
+<canvas width="200" height="100" style="border:1px solid #000000;" id="canvasLine"></canvas>
+
+<br>
+<hr>
+
+<h1>Canvas With Circle</h1>
+<canvas width="200" height="100" style="border:1px solid #000000;" id="canvasCircle"></canvas>
+
+<br>
+<hr>
+
+<h1>Canvas With Text</h1>
+<canvas width="200" height="100" style="border:1px solid #000000;" id="canvasText"></canvas>
+
+
+
+<script type="text/javascript">
+	var c = document.getElementById("canvasLine");
+	var ctx = c.getContext("2d");
+	ctx.moveTo(0,0);
+	ctx.lineTo(500,200);
+	ctx.stroke();
+
+
+	var canvas = document.getElementById("canvasCircle");
+	var ctxc = canvas.getContext("2d");
+	ctxc.beginPath();
+	ctxc.arc(95,50,40,0,2*Math.PI);
+	ctxc.stroke();
+
+	var cn = document.getElementById("canvasText");
+	var ctxt = cn.getContext("2d");
+	ctxt.font = "30px Arial";
+	ctxt.strokeText("Hello World",10,50);
+</script>
+
+</body>
+</html>

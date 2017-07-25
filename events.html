@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 Events</title>
+</head>
+<body onresize="resizePop()">
+
+<h2>Onclick Event</h2>
+<!-- onclick event -->
+<div onclick="alert('Alert Message');">Show Alert</div>
+
+<br>
+<hr>
+
+<!--  onmouseover and onmouseout events -->
+<h2>OnMouseOver and OnMouseOut Event</h2>
+<p>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/A_Smiley.jpg" alt="Smiley" width="32" height="32">	
+</p>
+
+<br>
+<hr>
+
+<h2>OnReSize Event</h2>
+<p>Try to resize the browser window.</p>
+
+<script type="text/javascript">
+	function bigImg(x) {
+    	x.style.height = "256px";
+    	x.style.width = "256px";
+	}
+
+	function normalImg(x) {
+    	x.style.height = "32px";
+    	x.style.width = "32px";
+	}
+
+	function resizePop() {
+		alert("You have resized browser");
+	}
+</script>
+</body>
+</html>
