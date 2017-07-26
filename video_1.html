@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Video</title>
+   </head>
+   
+   <body>
+   
+      <form>         
+         <video  width="300" height="200" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4">
+         Your browser does not support the video element.
+         </video>
+         <br />
+         
+         <input type="button" onclick="PlayVideo();"  value="Play"/>
+         <input type="button" onclick="PauseVideo();"  value="Pause"/>
+      </form>
+
+      <script type="text/javascript">
+
+         function GetElement(){
+            return document.getElementsByTagName("video")[0];
+         }
+
+         function PlayVideo(){
+            var v = GetElement();  
+            v.play(); 
+         }
+
+         function PauseVideo(){
+            var v = GetElement();  
+            v.pause(); 
+         }
+      </script>
+      
+   </body>
+</html>
